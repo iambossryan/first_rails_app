@@ -441,3 +441,181 @@ Processing by StudentsController#new as HTML
   Rendered students/_form.html.erb (34.8ms)
   Rendered students/new.html.erb within layouts/application (40.8ms)
 Completed 200 OK in 95ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (193.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (110.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStudents (20131209033740)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (218.8ms)[0m  [1mCREATE TABLE "students" ("id" serial primary key, "name" character varying(255), "age" integer, "address" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131209033740"]]
+  [1m[36m (16.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/students" for 127.0.0.1 at 2013-12-09 16:04:18 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (1.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 721ms (Views: 621.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-09 16:04:20 +0800
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-09 16:04:20 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:20 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:20 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:20 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:21 +0800
+
+
+Started GET "/students/new" for 127.0.0.1 at 2013-12-09 16:04:24 +0800
+Processing by StudentsController#new as HTML
+  Rendered students/_form.html.erb (200.6ms)
+  Rendered students/new.html.erb within layouts/application (214.3ms)
+Completed 200 OK in 280ms (Views: 256.3ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2013-12-09 16:04:36 +0800
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9vPhsgC5B7b9XJfnH9Er60N7feG2J8y82SrU3zQ2/Zw=", "student"=>{"name"=>"ryan", "age"=>"20", "address"=>"Nueva Ecija"}, "commit"=>"Create Student"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (37.8ms)[0m  INSERT INTO "students" ("address", "age", "created_at", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["address", "Nueva Ecija"], ["age", 20], ["created_at", Mon, 09 Dec 2013 08:04:36 UTC +00:00], ["name", "ryan"], ["updated_at", Mon, 09 Dec 2013 08:04:36 UTC +00:00]]
+  [1m[36m (14.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 75ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2013-12-09 16:04:36 +0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (2.6ms)[0m  SELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered students/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 77ms (Views: 61.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-09 16:04:37 +0800
+
+
+Started GET "/students" for 127.0.0.1 at 2013-12-09 16:04:39 +0800
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 1.2ms)
